@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Foxit.PDF;
 using Foxit.PDF.Merger;
@@ -15,11 +11,19 @@ namespace PDFHandler
         static void Main(string[] args)
         {
             Document doc = new Document();
+            ImportedPage page;
 
-            ImportedPage page = new ImportedPage(@"../../PDFs/sample.pdf", 1);
-            doc.Pages.Add(page);
-
-            //page.Elements.Add(new BackgroundImage(@"../../img/background.jpg"));            
+            try
+            {
+                for(int i = 1; i <= 10; i++)
+                {
+                    page = new ImportedPage(@"../../PDFs/sample.pdf", i);
+                    page.BackgroundElements.Add(new BackgroundImage(@"../../img/background.jpg"));
+                    doc.Pages.Add(page);
+                }                    
+            }
+            catch(Exception e)
+            { }
 
             doc.Draw(@"../../PDFs/result.pdf");
         }
