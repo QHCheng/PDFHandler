@@ -37,13 +37,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Spire.License, Version=1.3.2.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+    <Reference Include="Foxit.PDF.40, Version=2.0.0.40, Culture=neutral, PublicKeyToken=fda12fce861dd089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Spire.License.dll</HintPath>
-    </Reference>
-    <Reference Include="Spire.Pdf, Version=3.2.52.56040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Spire.Pdf.dll</HintPath>
+      <HintPath>bin\Debug\Foxit.PDF.40.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
